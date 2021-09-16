@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 //Images
 import apollo from "../img/apollo.jpg";
+import rawg from "../img/rawg.png";
 import inframe from "../img/inframe.webp";
-import inframe2 from "../img/inframe2.png";
+import inframe2 from "../img/inframe.webp";
 import theracer from "../img/theracer-small.png";
 import tinder from "../img/tinder.png";
 import goodtimes from "../img/goodtimes-small.png";
@@ -62,10 +63,10 @@ const OurWork = () => {
         animate={controls2}
         initial="hidden"
       >
-        <h2>Tinder Clone</h2>
+        <h2>Rawg.io Api</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
-          <img src={tinder} alt="tinder" />
+          <img src={rawg} alt="raw" />
         </Link>
       </Movie>
       <ScrollTop />
@@ -76,7 +77,7 @@ const OurWork = () => {
 const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
-  padding: 5rem 10rem;
+  padding: 3rem 5rem;
   @media (max-width: 1300px) {
     padding: 2rem 2rem;
   }
@@ -93,10 +94,20 @@ const Movie = styled(motion.div)`
     background: #3db2ff;
     margin-bottom: 3rem;
   }
+  a {
+    display: grid;
+    place-items: center;
+    width: 70%;
+    margin: 0 auto;
+    div {
+      width: 100%;
+    }
+  }
   img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    justify-content: center;
   }
 `;
 const Hide = styled.div`
@@ -107,7 +118,7 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 5%;
   width: 100%;
   height: 100vh;
   background: #fffebf;

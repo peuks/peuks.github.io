@@ -45,8 +45,9 @@ const FaqSection = () => {
             <p>Javascript : React, vue</p>
             <p>Docker : Dockerisation d'un environnement de travail</p>
             <p>Linux : Script Bash, Archlinux Linux</p>
-          </div
+          </div>
         </Toggle>
+
         <Toggle title="Clients">
           <div className="answer">
             <p>Apollo Immo [2020-2021] [Symfony, React, Docker]</p>
