@@ -63,7 +63,7 @@ const Hide = styled.div`
 `;
 const Circle = styled.div`
   border-radius: 50%;
-  width: 3rem;
+  min-width: 3rem;
   height: 3rem;
   background: #353535;
 `;

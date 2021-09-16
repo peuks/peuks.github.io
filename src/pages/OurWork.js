@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 //Images
 import apollo from "../img/apollo.jpg";
 import rawg from "../img/rawg.png";
-import inframe from "../img/inframe.webp";
 import inframe2 from "../img/inframe.webp";
-import theracer from "../img/theracer-small.png";
-import tinder from "../img/tinder.png";
-import goodtimes from "../img/goodtimes-small.png";
 //Animations
 import { motion } from "framer-motion";
 import {
@@ -118,7 +114,7 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 5%;
+  top: 0%;
   width: 100%;
   height: 100vh;
   background: #fffebf;

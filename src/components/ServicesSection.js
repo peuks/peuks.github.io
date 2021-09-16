@@ -2,7 +2,6 @@ import React from "react";
 //Import Icons
 import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
-import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 //Styles
@@ -69,8 +68,9 @@ const Services = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 1300px) {
-    justify-content: center;
+  justify-content: center;
+  @media (min-width: 1300px) {
+    justify-content: initial;
   }
 `;
 const Card = styled.div`
