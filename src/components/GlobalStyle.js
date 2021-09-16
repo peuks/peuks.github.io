@@ -9,10 +9,12 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html{
-    @media (max-width: 1700px){
-        font-size: 75%;
-    }
+    font-size: 75%;
     overflow-x: hidden;
+    @media (min-width: 1700px){
+        font-size: 100%;
+        overflow-x: initial;
+    }
 
     
 }
