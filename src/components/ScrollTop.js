@@ -4,10 +4,9 @@ import { useLocation } from "react-router-dom";
 const ScrollTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scroll({
-      top: 0,
-      left: 0,
-    });
+    setTimeout(() => {
+      window.scroll(0, 0);
+    }, 300);
   }, [pathname]);
   return null;
 };

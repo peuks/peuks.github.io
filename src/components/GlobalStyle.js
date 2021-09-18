@@ -9,19 +9,19 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html{
-    font-size: 75%;
-    overflow-x: hidden;
-    @media (min-width: 1700px){
-        font-size: 100%;
-        overflow-x: initial;
+    @media (max-width: 1700px){
+        font-size: 75%;
     }
-
+    overflow-x: hidden;
     
 }
 
 body{
     background: #1b1b1b;
     font-family: 'Inter', sans-serif;
+}
+
+html,body{
     overflow-x: hidden;
 }
 button{
