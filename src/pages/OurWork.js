@@ -38,7 +38,7 @@ const OurWork = () => {
       <Movie>
         <motion.h2 variants={fade}>Apollo Immo</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <Link to="/work/apollo-immo">
           <Hide>
             <motion.img variants={photoAnim} src={apollo} alt="athlete" />
           </Hide>
@@ -87,7 +87,8 @@ const Movie = styled(motion.div)`
 
   .line {
     height: 0.5rem;
-    background: #3db2ff;
+    /* background: #3db2ff; */
+    background: ${(props) => props.theme.lightTheme.clr__primary__secondary};
     margin-bottom: 3rem;
   }
   a {
@@ -117,20 +118,21 @@ const Frame1 = styled(motion.div)`
   top: 0%;
   width: 100%;
   height: 100vh;
-  background: #fffebf;
+  /* background: #fffebf; */
+  background: ${(props) => props.theme.lightTheme.clr__secondary};
   z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
   /* background: #ff8efb; */
-  background: ${(props) => props.theme.lightTheme.clr__primary};
+  background: ${(props) => props.theme.lightTheme.clr__primary__lighter};
 `;
 const Frame3 = styled(Frame1)`
   /* background: #8ed2ff; */
-  background: ${(props) => props.theme.lightTheme.clr__primary__lighter};
+  background: ${(props) => props.theme.lightTheme.clr__primary__secondary};
 `;
 const Frame4 = styled(Frame1)`
   /* background: #8effa0; */
-  background: ${(props) => props.theme.lightTheme.clr__primary__secondary};
+  background: ${(props) => props.theme.lightTheme.clr__primary};
 `;
 
 export default OurWork;

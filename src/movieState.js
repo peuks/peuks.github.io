@@ -9,15 +9,15 @@ import theracer2 from "./img/the-racer2.jpg";
 export const MovieState = () => {
   return [
     {
-      title: "The Athlete",
+      title: "Apollo Immo",
       mainImg: athlete,
       secondaryImg: athlete2,
-      url: "/work/the-athlete",
+      url: "/work/apollo-immo",
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: "Apollo Immo - Louez gratuitement votre appartement",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Plateforme de gestion locative, Apollo Immo facilite le processus de location moyenne et longue durée. Diffusion multi-plateformes d’annonces, vérification des dossiers, visites virtuelles, création de contrats, état des lieux dématérialisé, signature électronique et bien plus encore. Sans frais d’agence, simple et sécurisé !",
         },
         {
           title: "Fresh look on a brutal sport.",
