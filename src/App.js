@@ -11,31 +11,37 @@ import MovieDetail from "./pages/MovieDetail";
 import { Switch, Route, useLocation } from "react-router-dom";
 //Animation
 import { AnimatePresence } from "framer-motion";
+import { ThemeProvider } from "styled-components";
+
+// Theme
+import lightTheme from "./styles/theme";
 
 function App() {
   const location = useLocation();
 
   return (
     <div className="App">
-      <GlobalStyle />
+      <ThemeProvider theme={lightTheme}>
+        <GlobalStyle />
 
-      <Nav />
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
-            <AboutUs />
-          </Route>
-          <Route path="/work" exact>
-            <OurWork />
-          </Route>
-          <Route path="/work/:id">
-            <MovieDetail />
-          </Route>
-          <Route path="/contact">
-            <ContactUs />
-          </Route>
-        </Switch>
-      </AnimatePresence>
+        <Nav />
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
+            <Route path="/" exact>
+              <AboutUs />
+            </Route>
+            <Route path="/work" exact>
+              <OurWork />
+            </Route>
+            <Route path="/work/:id">
+              <MovieDetail />
+            </Route>
+            <Route path="/contact">
+              <ContactUs />
+            </Route>
+          </Switch>
+        </AnimatePresence>
+      </ThemeProvider>
     </div>
   );
 }

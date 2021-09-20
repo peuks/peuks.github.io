@@ -121,13 +121,16 @@ const Frame1 = styled(motion.div)`
   z-index: 2;
 `;
 const Frame2 = styled(Frame1)`
-  background: #ff8efb;
+  /* background: #ff8efb; */
+  background: ${(props) => props.theme.lightTheme.clr__primary};
 `;
 const Frame3 = styled(Frame1)`
-  background: #8ed2ff;
+  /* background: #8ed2ff; */
+  background: ${(props) => props.theme.lightTheme.clr__primary__lighter};
 `;
 const Frame4 = styled(Frame1)`
-  background: #8effa0;
+  /* background: #8effa0; */
+  background: ${(props) => props.theme.lightTheme.clr__primary__secondary};
 `;
 
 export default OurWork;

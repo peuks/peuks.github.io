@@ -1,27 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box
 }
-
 html{
     @media (max-width: 1700px){
         font-size: 75%;
     }
-    overflow-x: hidden;
     
 }
-
 body{
-    background: #1b1b1b;
-    font-family: 'Inter', sans-serif;
-}
+    /* background: #1b1b1b; */
+  background: ${(props) => props.theme.lightTheme.clr__primary};
 
-html,body{
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
 button{
@@ -29,14 +24,16 @@ button{
     font-size: 1.1.rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #23d997;
+    border: 3px solid ${(props) =>
+      props.theme.lightTheme.clr__primary__secondary};
     background: transparent;
-    color: white;
+    color: ${(props) => props.theme.lightTheme.clr__secondary};
     transition: all 0.5s ease;
     font-family: 'Inter', sans-serif;
     &:hover{
-        background-color: #23d997;
-        color: white;
+        background-color:${(props) =>
+          props.theme.lightTheme.clr__primary__secondary};
+        color: ${(props) => props.theme.lightTheme.clr__secondary};
     }
 }
     h2{
@@ -44,7 +41,7 @@ button{
         font-size: 4rem;
     }
     h3{
-        color: white;
+        color: ${(props) => props.theme.lightTheme.clr__secondary};
     }
     h4{
         font-weight: bold;
@@ -56,7 +53,8 @@ button{
     }
     span{
         font-weight: bold;
-        color:#23d997;
+        color: ${(props) => props.theme.lightTheme.clr__primary__secondary};
+
     }
     p{
         padding: 3rem 0rem;
@@ -64,7 +62,6 @@ button{
         font-size: 1.4rem;
         line-height: 150%;
     }
-
 `;
 
 export default GlobalStyle;

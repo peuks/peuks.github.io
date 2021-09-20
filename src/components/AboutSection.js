@@ -18,12 +18,18 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Front and Back Env Developpeur , Open To Work
+          Php & React dev who loves design , build and somethines rescue
+          applications. Have a project , idea or problem you'd like to discuss ?{" "}
         </motion.p>
         <motion.button variants={fade}>See my Work</motion.button>
       </Description>
       <Image>
-        <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
+        {/* <motion.img variants={photoAnim} src={home1} alt="guy with a camera" /> */}
+        <motion.img
+          variants={photoAnim}
+          src="https://dummyimage.com/840x840.png"
+          alt="guy with a camera"
+        />
       </Image>
       <Wave />
     </About>
