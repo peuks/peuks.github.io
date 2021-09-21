@@ -18,10 +18,11 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Php & React dev who loves design , build and somethines rescue
-          applications. Have a project , idea or problem you'd like to discuss ?{" "}
+          Php & React dev who loves design, build and sometimes rescue
+          applications. Have a project, idea or problem you would need to
+          discuss ?
         </motion.p>
-        <motion.button variants={fade}>See my Work</motion.button>
+        <motion.button variants={fade}>See my Portfolio</motion.button>
       </Description>
       <Image>
         {/* <motion.img variants={photoAnim} src={home1} alt="guy with a camera" /> */}

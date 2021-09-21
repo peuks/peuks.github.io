@@ -23,7 +23,7 @@ const OurWork = () => {
   const [element2, controls2] = useScroll();
   return (
     <Work
-      style={{ background: "#fff" }}
+      style={{ background: "#EEEEEE" }}
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
@@ -95,6 +95,10 @@ const Movie = styled(motion.div)`
     display: grid;
     place-items: center;
     width: 70%;
+    @media (max-width: 1300px) {
+      width: 85%;
+    }
+
     margin: 0 auto;
     div {
       width: 100%;

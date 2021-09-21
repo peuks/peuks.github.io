@@ -7,10 +7,11 @@ import FaqSection from "../components/FaqSection";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
+import styled from "styled-components";
 
 const AboutUs = () => {
   return (
-    <motion.div
+    <AboutUsStyle
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
@@ -20,8 +21,11 @@ const AboutUs = () => {
       <ServicesSection />
       <FaqSection />
       <ScrollTop />
-    </motion.div>
+    </AboutUsStyle>
   );
 };
+const AboutUsStyle = styled(motion.div)`
+  background: ${(props) => props.theme.lightTheme.clr__primary__lighter};
+`;
 
 export default AboutUs;

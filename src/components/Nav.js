@@ -3,16 +3,16 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import testLogo from "../img/Corbel.png";
 
 const Nav = () => {
+  console.log(testLogo);
   const { pathname } = useLocation();
   return (
     <StyledNav>
-      <h1>
-        <Link id="logo" to="/">
-          {"<DV/>"}
-        </Link>
-      </h1>
+      <Link id="logo" to="/">
+        <img src={testLogo} alt="fireSpot" />
+      </Link>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -50,9 +50,8 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background: ${props => props.theme.lightTheme.clr__primary};
+  background: ${(props) => props.theme.lightTheme.clr__primary};
 
-  
   position: sticky;
   top: 0;
   z-index: 10;
@@ -68,6 +67,10 @@ const StyledNav = styled.nav`
     font-size: 1.5rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
+    img {
+      width: 64px;
+      height: 64px;
+    }
   }
   li {
     padding-left: 10rem;
@@ -77,8 +80,8 @@ const StyledNav = styled.nav`
     flex-direction: column;
     padding: 2rem 1rem;
     #logo {
-      display: inline-block;
-      margin: 1rem;
+      /* display: inline-block; */
+      /* margin: 1rem; */
     }
     ul {
       padding: 2rem;
@@ -93,7 +96,7 @@ const StyledNav = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: ${props => props.theme.lightTheme.clr__primary__secondary};
+  background: ${(props) => props.theme.lightTheme.clr__primary__secondary};
   width: 0%;
   position: absolute;
   bottom: -80%;

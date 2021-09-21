@@ -17,54 +17,63 @@ const FaqSection = () => {
       initial="hidden"
     >
       <h2>
-        <span>FAQ</span>
+        About <span>Me</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="Experiences">
+        <Toggle title="Who Am I ?">
           <div className="answer">
             <p>
-              Je suis un développeur Full Stack habitant à Strasbourg. J'ai une
-              appétence pour le code optimisé et bien structuré.
-              <p />
-              <p>
-                Passionnée de danse, d'activités en plein air et de voitures
-                anciennes. Déterminée et passionnée , je travaille sur des
-                projets ambitieux avec des personnes positives.
-              </p>
-              <Link to="/contact">
-                <motion.button variants={fade}>
-                  Et si l'on travaillez ensemble ?
-                </motion.button>
-              </Link>
+              Fulls Stack React / Php developer living in Strasbourg. I have an
+              appetite for optimized and well-structured code.
             </p>
+            <p>
+              Passionate about dance, outdoor activities and vintage cars. I
+              work on ambitious projects with positive people.
+            </p>
+            <Link to="/contact">
+              <motion.button variants={fade}>
+                How about working together ?
+              </motion.button>
+            </Link>
           </div>
         </Toggle>
-        <Toggle title="Skills">
+        <Toggle title="My Background">
           <div className="answer">
-            <p>Php : Symfony 5.2.9</p>
-            <p>Javascript : React, vue</p>
-            <p>Docker : Dockerisation d'un environnement de travail</p>
-            <p>Linux : Script Bash, Archlinux Linux</p>
+            <p>[ 2021 ] Elan Formation Strasbourg </p>
+            <p>[ 2020 ] BootCamp Le Wagon Marseille</p>
+            <p>
+              [ 2017 ] Bachelor's degree in economics and management Strasbourg
+            </p>
+            <p></p>
+            {/* <p>Apollo Immo [2020-2021] [Symfony, React, Docker]</p>
+            <p>Vassy Like The Wind: [2020] [Wordpress]</p>
+            <p>Wendling SARL : [2014 - 2021] [Dolibarr,Linux,BackUp ] </p> */}
           </div>
         </Toggle>
 
-        <Toggle title="Clients">
+        <Toggle title="Skills">
           <div className="answer">
-            <p>Apollo Immo [2020-2021] [Symfony, React, Docker]</p>
-            <p>Vassy Like The Wind: [2020] [Wordpress]</p>
-            <p>Wendling SARL : [2014 - 2021] [Dolibarr,Linux,BackUp ] </p>
+            <div className="answer__wrapper">
+              <div classname="anwser__section">
+                <h4>Technicals Skills</h4>
+                <p>Php : Symfony 5.x</p>
+                <p>Javascript : React, Redux Vue, Form Validation, Axios</p>
+                <p>Docker : Dockerize an app</p>
+                <p>Linux : Script Bash, Archilinux User</p>
+              </div>
+              <div classname="anwser__section">
+                <h4>Softs Skills</h4>
+                <p>Problem solving and creativity</p>
+                <p>Collaboration and teamwork</p>
+                <p>Critical thinking skills</p>
+                <p>Ability to learn, adapt and grow</p>
+              </div>
+            </div>
           </div>
         </Toggle>
-        <Toggle title="Links">
-          <div className="answer">
-            <Link to="/contact">
-              <motion.button variants={fade}>Linkedin</motion.button>
-            </Link>
-            <Link to="/contact">
-              <motion.button variants={fade}>Github</motion.button>
-            </Link>
-          </div>
-        </Toggle>
+        {/* <Toggle title="My Clients">
+          <div className="answer">My Menties</div>
+        </Toggle> */}
       </AnimateSharedLayout>
     </Faq>
   );
@@ -72,9 +81,7 @@ const FaqSection = () => {
 
 const Faq = styled(About)`
   display: block;
-  span {
-    display: block;
-  }
+
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;
@@ -90,6 +97,24 @@ const Faq = styled(About)`
     cursor: pointer;
   }
   .answer {
+    &__wrapper {
+      display: flex;
+      /* width: 100%; */
+      justify-content: space-between;
+      flex-wrap: wrap;
+      /* padding on the first element */
+      div:nth-child(1) {
+        padding-bottom: 3.5em;
+        margin-bottom: 2.5em;
+      }
+      div {
+        margin: 0 auto;
+        @media (min-width: 1300px) {
+          margin: inherit;
+        }
+      }
+    }
+
     padding: 2rem 0rem;
     p {
       padding: 1rem 0rem;
