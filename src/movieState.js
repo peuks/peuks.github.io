@@ -5,12 +5,14 @@ import theracer from "./img/theracer-small.png";
 import athlete2 from "./img/athlete2.png";
 import goodtimes2 from "./img/good-times2.jpg";
 import theracer2 from "./img/the-racer2.jpg";
+import apolloImmo from "./img/apolloImmo.png";
+import LouezsurApollo from "./img/Louez sur Apollo.png";
 
 export const MovieState = () => {
   return [
     {
-      title: "Apollo Immo",
-      mainImg: athlete,
+      title: "Apollo Immo Symfony ",
+      mainImg: LouezsurApollo,
       secondaryImg: athlete2,
       url: "/work/apollo-immo",
       awards: [

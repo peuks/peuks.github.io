@@ -36,7 +36,7 @@ const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
-        <motion.h2 variants={fade}>Apollo Immo</motion.h2>
+        <motion.h2 variants={fade}>Apollo Immo Rent Online</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/apollo-immo">
           <Hide>

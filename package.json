@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "framer-motion": "^2.9.5",
     "react": "^16.14.0",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.14.0",
     "react-intersection-observer": "^8.29.0",
     "react-router-dom": "^5.2.0",
