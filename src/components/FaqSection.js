@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
+import Button from "./ui/Button";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { fade, scrollReveal } from "../animation";
@@ -31,9 +32,7 @@ const FaqSection = () => {
               work on ambitious projects with positive people.
             </p>
             <Link to="/contact">
-              <motion.button variants={fade}>
-                How about working together ?
-              </motion.button>
+              <Button variants={fade} label="How about working together ?" />
             </Link>
           </div>
         </Toggle>
@@ -44,10 +43,6 @@ const FaqSection = () => {
             <p>
               [ 2017 ] Bachelor's degree in economics and management Strasbourg
             </p>
-            <p></p>
-            {/* <p>Apollo Immo [2020-2021] [Symfony, React, Docker]</p>
-            <p>Vassy Like The Wind: [2020] [Wordpress]</p>
-            <p>Wendling SARL : [2014 - 2021] [Dolibarr,Linux,BackUp ] </p> */}
           </div>
         </Toggle>
 

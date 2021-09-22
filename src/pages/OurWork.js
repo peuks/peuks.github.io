@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 //Images
 import apollo from "../img/apollo.jpg";
-import rawg from "../img/rawg.png";
+import rawg from "../img/raw.jpg";
+
 import inframe2 from "../img/inframe.webp";
 //Animations
 import { motion } from "framer-motion";

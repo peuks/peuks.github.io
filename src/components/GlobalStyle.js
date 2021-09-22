@@ -20,23 +20,7 @@ body{
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
-button{
-    font-weight: bold;
-    font-size: 1.1.rem;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border: 3px solid ${(props) =>
-      props.theme.lightTheme.clr__primary__secondary};
-    background: transparent;
-    color: ${(props) => props.theme.lightTheme.clr__secondary};
-    transition: all 0.5s ease;
-    font-family: 'Inter', sans-serif;
-    &:hover{
-        background-color:${(props) =>
-          props.theme.lightTheme.clr__primary__secondary};
-        color: ${(props) => props.theme.lightTheme.clr__secondary};
-    }
-}
+
     h2{
         font-weight: lighter;
         font-size: 4rem;

@@ -7,6 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import Nav from "./components/Nav";
 import MovieDetail from "./pages/MovieDetail";
+import Gallery from "./pages/Gallery";
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
 //Animation
@@ -27,6 +28,9 @@ function App() {
         <Nav />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
+            <Route path="/gallery" exact>
+              <Gallery />
+            </Route>
             <Route path="/" exact>
               <AboutUs />
             </Route>

@@ -1,10 +1,12 @@
 import React from "react";
-import home1 from "../img/david.jpg";
+// import home1 from "../img/david.jpg";
 import { About, Description, Image, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
+import Button from "./ui/Button";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -22,7 +24,9 @@ const AboutSection = () => {
           applications. Have a project, idea or problem you would need to
           discuss ?
         </motion.p>
-        <motion.button variants={fade}>See my Portfolio</motion.button>
+        <Link to="/work">
+          <Button variants={fade} label="See my Portfolio" />
+        </Link>
       </Description>
       <Image>
         {/* <motion.img variants={photoAnim} src={home1} alt="guy with a camera" /> */}
