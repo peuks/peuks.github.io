@@ -14,6 +14,16 @@ import apollo4 from "./img/apollo4.png";
 import apollo5 from "./img/apollo.jpg";
 import rawg from "./img/raw.jpg";
 import rawg2 from "./img/rawg2.png";
+import ignite from "./img/ignite.svg";
+import ignite1 from "./img/ignite1.png";
+import ignite2 from "./img/ignite2.png";
+import ignite3 from "./img/ignite3.png";
+import ignite4 from "./img/ignite4.png";
+import inframe2 from "./img/inframe2.jpg";
+import inframe3 from "./img/inframe3.jpg";
+import inframe4 from "./img/inframe4.jpg";
+import inframe5 from "./img/inframe5.jpg";
+import inframe6 from "./img/inframe6.jpg";
 
 export const MovieState = () => {
   return [
@@ -50,54 +60,61 @@ export const MovieState = () => {
     {
       title: "Ignite",
       mainImg: rawg2,
-      url: "/work/good-times",
-      secondaryImg: goodtimes2,
+      url: "/work/ignite",
+      secondaryImg: ignite,
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: "Ignite - The Best Video Game Database",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Are you looking for new games of 2021 (and beyond) to get excited about ? You can not be wrong being here !",
+          // "You are an owner and you have an apartment to rent ? Or are you a tenant looking for a new home? Are the steps complicated? Let us help you!",
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: "The fastest way to be informed about video games 🎮",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "New, trending and Popular Games, synopsis and Image Gallery",
         },
         {
-          title: "It’s okay lmao.",
+          title: "This project was made with... 💻",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "React - Redux - Raw.io -  Axios - Styled-Components - FramerMotion",
         },
       ],
       images: [
         { url: rawg, label: "" },
-        { url: rawg, label: "" },
-        { url: rawg, label: "" },
-        { url: rawg, label: "" },
-        { url: rawg, label: "" },
+        { url: ignite1, label: "" },
+        { url: ignite2, label: "" },
+        { url: ignite3, label: "" },
+        { url: ignite4, label: "" },
       ],
     },
     {
-      title: "The Racer",
-      mainImg: theracer,
-      url: "/work/the-racer",
+      title: "Inframe",
+      mainImg: inframe2,
+      url: "/work/inframe",
       secondaryImg: theracer2,
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: "IN FRAME Truly A masterpiece",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "IN FRAME collects stories about ordinary people with extraordinary hearts. Inspired by the places Vassy ( the author ) has visited and the people she has met there",
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: "Silent heroes are everywhere! 📕",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "A candid collection of stories about ordinary people with extraordinary hearts. Wrapped in words, their stories are direct and honest, without a filter. Every second person is a good one, they say. If you don’t see one- be one.",
         },
         {
-          title: "It’s okay lmao.",
+          title: "This project was made with... 💻",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Wordpress , Elementor, Figma, Canva, Font Awesome, Grid",
         },
+      ],
+      images: [
+        { url: inframe3, label: "" },
+        { url: inframe4, label: "" },
+        { url: inframe5, label: "" },
+        { url: inframe6, label: "" },
       ],
     },
   ];

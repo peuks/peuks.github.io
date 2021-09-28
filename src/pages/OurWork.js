@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 //Images
 import apollo from "../img/apollo.jpg";
-import rawg from "../img/raw.jpg";
+import ignite from "../img/ignite.svg";
 
 import inframe2 from "../img/inframe.webp";
 //Animations
@@ -49,7 +49,7 @@ const OurWork = () => {
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>Inframe</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
+        <Link to="/work/inframe">
           <img src={inframe2} alt="inframe" />
         </Link>
       </Movie>
@@ -62,8 +62,11 @@ const OurWork = () => {
       >
         <h2>Rawg.io Api</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={rawg} alt="raw" />
+        <Link to="/work/ignite">
+          <img
+            src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+            alt="raw"
+          />
         </Link>
       </Movie>
       <ScrollTop />
