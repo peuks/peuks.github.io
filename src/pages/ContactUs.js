@@ -36,7 +36,7 @@ const ContactUs = () => {
       >
         <Title>
           <Hide>
-            <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
+            <motion.h1 variants={titleAnim}>Get in touch.</motion.h1>
           </Hide>
         </Title>
         <div>
@@ -68,7 +68,9 @@ const ContactUs = () => {
             <Social variants={titleAnim}>
               {/* <Circle /> */}
               <h2 className="contact__title">
-                <Linkedin /> Linkedin <br />
+                <a href="https://www.linkedin.com/in/davidvanmak/">
+                  <Linkedin /> Linkedin <br />
+                </a>
               </h2>
             </Social>
           </Hide>
@@ -101,13 +103,13 @@ const ContactStyle = styled(motion.div)`
 const Title = styled.div`
   margin: 0;
   color: black;
-  @media (max-width: 1500px) {
+  /* @media (max-width: 1500px) {
     margin-top: 5rem;
   }
   @media (max-width: 960px) {
     margin-top: 1rem;
     margin-bottom: 4rem;
-  }
+  } */
 `;
 const Hide = styled.div`
   overflow: hidden;
@@ -123,17 +125,11 @@ const Social = styled(motion.div)`
   align-items: center;
   h2 {
     margin: 2rem;
-    font-size: 4em;
   }
   a {
     text-decoration: none;
     font-size: unset;
     color: unset;
-  }
-  @media (max-width: 576px) {
-    h2 {
-      font-size: 2.8em;
-    }
   }
 `;
 

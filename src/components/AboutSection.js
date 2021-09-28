@@ -14,9 +14,9 @@ const AboutSection = () => {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h1 variants={titleAnim}>
               Developpeur <span>FullStack</span> & Mentor
-            </motion.h2>
+            </motion.h1>
           </Hide>
         </motion.div>
         <motion.p variants={fade}>

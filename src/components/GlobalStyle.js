@@ -21,9 +21,13 @@ body{
     overflow-x: hidden;
 }
 
-    h2{
+    h1{
         font-weight: lighter;
         font-size: 4rem;
+    }
+    h2{
+        font-weight: lighter;
+        font-size: 2.8rem;
     }
     h3{
         color: ${(props) => props.theme.lightTheme.clr__secondary};
