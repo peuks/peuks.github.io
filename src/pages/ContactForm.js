@@ -6,6 +6,18 @@ import ButtonStyle from "../components/ui/Button";
 import TextField from "../components/ui/form/TextField";
 
 const ContactForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevents default refresh by the browser
+    // console.log(e);
+    // // let myForm = document.getElementById("myForm");
+    // let formData = new FormData(e.target);
+    // console.log(e.target);
+    // console.log(formData);
+    const formData = new FormData(document.querySelector("form"));
+    for (var pair of formData.entries()) {
+      console.log(pair[0] + ": " + pair[1]);
+    }
+  };
   return (
     <FormStyle
       exit="exit"
@@ -19,7 +31,14 @@ const ContactForm = () => {
           <motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
         </Hide>
       </Title>
-      <form>
+      <form
+        // onSubmit={handleSubmit}
+        name="myForm"
+        id="form"
+        action="https://formsubmit.co/kikopopopo@gmail.com"
+        method="POST"
+      >
+        <TextField type="hidden" name="_next" value="http://localhost:3000" />
         <TextField
           type="text"
           id="fname"
@@ -40,7 +59,7 @@ const ContactForm = () => {
         <TextField
           type="textarea"
           id="subject"
-          name="subject"
+          name="message"
           placeholder="Write something.."
           label="What is it about ?"
           rows="5"
@@ -48,7 +67,12 @@ const ContactForm = () => {
           required
         />
 
-        <ButtonStyle type="submit" value="Submit" label="Submit" />
+        <ButtonStyle
+          type="submit"
+          value="Submit"
+          label="Submit"
+          onClick={handleSubmit}
+        />
       </form>
     </FormStyle>
   );

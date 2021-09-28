@@ -18,7 +18,7 @@ export const Description = styled.div`
   flex: 2;
   /* padding-right: 5rem; */
   z-index: 2;
-  h2 {
+  h1 {
     font-weight: lighter;
   }
   @media (max-width: 1300px) {
@@ -41,4 +41,11 @@ export const Image = styled.div`
 
 export const Hide = styled.div`
   overflow: hidden;
+`;
+
+export const Circle = styled.div`
+  border-radius: 50%;
+  min-width: 3rem;
+  height: 3rem;
+  background: #353535;
 `;

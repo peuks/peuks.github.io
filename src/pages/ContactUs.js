@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 const ContactUs = () => {
+  console.log(process.env.REACT_APP_EMAIL_USER_ID);
   return (
     <>
       <GlobalStyle />
@@ -42,7 +43,6 @@ const ContactUs = () => {
         <div>
           <Hide>
             <Social variants={titleAnim}>
-              {/* <Circle /> */}
               <Link to="/contact/message">
                 <h2 className="contact__title">
                   <Message /> Send A Message
@@ -52,7 +52,6 @@ const ContactUs = () => {
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
-              {/* <Circle /> */}
               <h2 className="contact__title">
                 <Mailto
                   email="vanmakdavid/lwg@gmail.com"
@@ -66,7 +65,6 @@ const ContactUs = () => {
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
-              {/* <Circle /> */}
               <h2 className="contact__title">
                 <a href="https://www.linkedin.com/in/davidvanmak/">
                   <Linkedin /> Linkedin <br />
@@ -76,7 +74,6 @@ const ContactUs = () => {
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
-              {/* <Circle /> */}
               <h2 className="contact__title">
                 <a href="https://github.com/peuks">
                   <Github /> Github
@@ -114,12 +111,7 @@ const Title = styled.div`
 const Hide = styled.div`
   overflow: hidden;
 `;
-const Circle = styled.div`
-  border-radius: 50%;
-  min-width: 3rem;
-  height: 3rem;
-  background: #353535;
-`;
+
 const Social = styled(motion.div)`
   display: flex;
   align-items: center;
