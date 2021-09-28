@@ -4,10 +4,10 @@ import GlobalStyle from "./components/GlobalStyle";
 //Import Pages
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import ContactForm from "./pages/ContactForm";
 import OurWork from "./pages/OurWork";
 import Nav from "./components/Nav";
 import MovieDetail from "./pages/MovieDetail";
-import Gallery from "./pages/Gallery";
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
 //Animation
@@ -41,7 +41,7 @@ function App() {
               <ContactUs />
             </Route>
             <Route path="/contact/message">
-              <Gallery />
+              <ContactForm />
             </Route>
           </Switch>
         </AnimatePresence>

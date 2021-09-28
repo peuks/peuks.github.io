@@ -24,16 +24,18 @@ const ContactForm = () => {
           type="text"
           id="fname"
           name="name"
-          placeholder="Johne Doe"
+          placeholder="Indiana Jones"
           label="Name"
+          required
         />
 
         <TextField
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="recrute@me"
           label="Email"
+          required
         />
         <TextField
           type="textarea"
@@ -43,6 +45,7 @@ const ContactForm = () => {
           label="What is it about ?"
           rows="5"
           cols="33"
+          required
         />
 
         <ButtonStyle type="submit" value="Submit" label="Submit" />
@@ -53,7 +56,7 @@ const ContactForm = () => {
 
 const FormStyle = styled(motion.section)`
   height: 100%;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   @media (min-width: 960px) {
     width: clamp(45ch, 50%, 75ch);
     margin: 0 auto;
@@ -72,10 +75,14 @@ const FormStyle = styled(motion.section)`
 `;
 
 const Title = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 0rem;
   color: ${(props) => props.theme.lightTheme.clr__secondary};
 
-  margin-top: 2rem;
+  @media (min-width: 760) {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
   @media (min-width: 1300px) {
     margin-top: 5rem;
   }

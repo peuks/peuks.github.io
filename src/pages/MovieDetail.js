@@ -5,7 +5,7 @@ import { MovieState } from "../movieState";
 //Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
-import Gallery from "./Gallery";
+import Gallery from "../components/Gallery";
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -18,7 +18,6 @@ const MovieDetail = () => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
     setMovie(currentMovie[0]);
   }, [movies, url]);
-  let width = window.innerWidth;
 
   return (
     <>

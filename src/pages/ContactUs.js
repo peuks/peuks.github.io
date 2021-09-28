@@ -8,10 +8,15 @@ import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 import Mailto from "../components/ui/Mailto";
-import Toggle from "../components/Toggle";
+import Linkedin from "../components/ui/icons/Linkedin";
+import Github from "../components/ui/icons/Github";
+import Email from "../components/ui/icons/Email";
+import Message from "../components/ui/icons/Message";
 
-// import FacebookIcon from "@mui/icons-material/Facebook";
+//
+// get our fontawesome imports
 
+//
 export const GlobalStyle = createGlobalStyle`
   body {
   background: ${(props) => props.theme.lightTheme.clr__secondary};
@@ -37,39 +42,44 @@ const ContactUs = () => {
         <div>
           <Hide>
             <Social variants={titleAnim}>
-              <Circle />
+              {/* <Circle /> */}
               <Link to="/contact/message">
-                <h2 className="contact__title">Send A Message</h2>
+                <h2 className="contact__title">
+                  <Message /> Send A Message
+                </h2>
               </Link>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
-              <Circle />
+              {/* <Circle /> */}
               <h2 className="contact__title">
                 <Mailto
                   email="vanmakdavid/lwg@gmail.com"
                   subject=""
                   body="Hello world!"
                 >
-                  Send an email.
+                  <Email /> Email
                 </Mailto>
               </h2>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
-              <Circle />
-              <Toggle
-                className="contact__title"
-                faqline="false"
-                title="Social Media"
-                variant="h2"
-              >
-                <div className="answer">
-                  <h1>coucou</h1>
-                </div>
-              </Toggle>
+              {/* <Circle /> */}
+              <h2 className="contact__title">
+                <Linkedin /> Linkedin <br />
+              </h2>
+            </Social>
+          </Hide>
+          <Hide>
+            <Social variants={titleAnim}>
+              {/* <Circle /> */}
+              <h2 className="contact__title">
+                <a href="https://github.com/peuks">
+                  <Github /> Github
+                </a>
+              </h2>
             </Social>
           </Hide>
         </div>
@@ -89,13 +99,14 @@ const ContactStyle = styled(motion.div)`
   }
 `;
 const Title = styled.div`
-  margin-bottom: 4rem;
+  margin: 0;
   color: black;
   @media (max-width: 1500px) {
     margin-top: 5rem;
   }
   @media (max-width: 960px) {
     margin-top: 1rem;
+    margin-bottom: 4rem;
   }
 `;
 const Hide = styled.div`
@@ -119,9 +130,9 @@ const Social = styled(motion.div)`
     font-size: unset;
     color: unset;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 576px) {
     h2 {
-      font-size: 2em;
+      font-size: 2.8em;
     }
   }
 `;

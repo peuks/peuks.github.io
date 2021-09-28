@@ -7,7 +7,6 @@ import React, { useState } from "react";
  * @returns
  */
 const Toggle = ({ children, title, faqline = false, variant = "h4" }) => {
-  console.log(variant);
   const [toggle, setToggle] = useState(false);
   return (
     <motion.div layout className="question" onClick={() => setToggle(!toggle)}>

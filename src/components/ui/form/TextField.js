@@ -15,7 +15,7 @@ const TextField = ({ type, id, name, placeholder, label, ...props }) => {
     <TextFieldStyle className="text-field">
       <label for={id}>{label}</label>
       <input
-        type="textarea"
+        type={type}
         id={id}
         name={name}
         placeholder={placeholder}
@@ -44,13 +44,13 @@ const TextFieldStyle = styled(motion.div)`
       border-bottom: 1px solid
         ${(props) => props.theme.lightTheme.clr__primary__secondary};
       color: ${(props) => props.theme.lightTheme.clr__secondary};
-
+      font-size: 1.4rem;
       padding: 4px 0 5px;
       padding: 16.5px 8px;
       height: 2.4375em;
       ::placeholder {
         color: ${(props) => props.theme.lightTheme.clr__secondary};
-        font-size: 1em;
+        font-size: 1.4rem;
         letter-spacing: 2px;
       }
     }
@@ -61,9 +61,12 @@ const TextFieldStyle = styled(motion.div)`
   textarea {
     padding: 16.5px 8px;
     margin: 1.25em 0;
+    font-size: 1.4rem;
     background: rgba(0, 0, 0, 0);
     border: 1px solid
       ${(props) => props.theme.lightTheme.clr__primary__secondary};
+    color: ${(props) => props.theme.lightTheme.clr__secondary};
+
     &::placeholder {
       color: ${(props) => props.theme.lightTheme.clr__secondary};
     }
