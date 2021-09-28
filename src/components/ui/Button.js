@@ -2,16 +2,18 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const button = ({ label }) => {
+const Button = ({ label }) => {
   // Prevent error if props are not provided
   label = label ?? "N/A";
-  return <Button className="button">{label}</Button>;
+  return <ButtonStyle className="button">{label}</ButtonStyle>;
 };
 
-const Button = styled(motion.button)`
+const ButtonStyle = styled(motion.button)`
   &.button {
     font-weight: bold;
-    font-size: 1.1.rem;
+    font-size: 1.1rem;
+    letter-spacing: 2.28px;
+    font-family: "Inter", sans-serif;
     cursor: pointer;
     padding: 1rem 2rem;
     border: 3px solid
@@ -19,7 +21,6 @@ const Button = styled(motion.button)`
     background: transparent;
     color: ${(props) => props.theme.lightTheme.clr__secondary};
     transition: all 0.5s ease;
-    font-family: "Inter", sans-serif;
     &:hover {
       background-color: ${(props) =>
         props.theme.lightTheme.clr__primary__secondary};
@@ -27,4 +28,4 @@ const Button = styled(motion.button)`
     }
   }
 `;
-export default button;
+export default Button;

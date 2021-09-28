@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
 import Button from "./ui/Button";
-import { AnimateSharedLayout, motion } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { fade, scrollReveal } from "../animation";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ const FaqSection = () => {
         About <span>Me</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="Who Am I ?">
+        <Toggle faqline="true" title="Who Am I ?">
           <div className="answer">
             <p>
               Fulls Stack React / Php developer living in Strasbourg. I have an
@@ -36,7 +36,7 @@ const FaqSection = () => {
             </Link>
           </div>
         </Toggle>
-        <Toggle title="My Background">
+        <Toggle faqline="true" title="My Background">
           <div className="answer">
             <p>[ 2021 ] Elan Formation Strasbourg </p>
             <p>[ 2020 ] BootCamp Le Wagon Marseille</p>
@@ -46,7 +46,7 @@ const FaqSection = () => {
           </div>
         </Toggle>
 
-        <Toggle title="Skills">
+        <Toggle faqline="true" title="Skills">
           <div className="answer">
             <div className="answer__wrapper">
               <div classname="anwser__section">

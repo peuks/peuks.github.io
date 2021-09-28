@@ -28,9 +28,6 @@ function App() {
         <Nav />
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
-            <Route path="/gallery" exact>
-              <Gallery />
-            </Route>
             <Route path="/" exact>
               <AboutUs />
             </Route>
@@ -40,8 +37,11 @@ function App() {
             <Route path="/work/:id">
               <MovieDetail />
             </Route>
-            <Route path="/contact">
+            <Route path="/contact" exact>
               <ContactUs />
+            </Route>
+            <Route path="/contact/message">
+              <Gallery />
             </Route>
           </Switch>
         </AnimatePresence>

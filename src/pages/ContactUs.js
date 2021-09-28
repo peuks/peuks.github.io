@@ -6,6 +6,11 @@ import styled from "styled-components";
 
 // After
 import { createGlobalStyle } from "styled-components";
+import { Link } from "react-router-dom";
+import Mailto from "../components/ui/Mailto";
+import Toggle from "../components/Toggle";
+
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -33,19 +38,38 @@ const ContactUs = () => {
           <Hide>
             <Social variants={titleAnim}>
               <Circle />
-              <h2 className="contact__title">Send Us A Message</h2>
+              <Link to="/contact/message">
+                <h2 className="contact__title">Send A Message</h2>
+              </Link>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
               <Circle />
-              <h2 className="contact__title">Send an email.</h2>
+              <h2 className="contact__title">
+                <Mailto
+                  email="vanmakdavid/lwg@gmail.com"
+                  subject=""
+                  body="Hello world!"
+                >
+                  Send an email.
+                </Mailto>
+              </h2>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
               <Circle />
-              <h2 className="contact__title">Social Media</h2>
+              <Toggle
+                className="contact__title"
+                faqline="false"
+                title="Social Media"
+                variant="h2"
+              >
+                <div className="answer">
+                  <h1>coucou</h1>
+                </div>
+              </Toggle>
             </Social>
           </Hide>
         </div>
@@ -57,19 +81,11 @@ const ContactUs = () => {
 const ContactStyle = styled(motion.div)`
   background: ${(props) => props.theme.lightTheme.clr__secondary};
 
-  padding: 5rem 10rem;
   color: #353535;
-  /* min-height: 90vh;
-   */
-  .contact__title {
-    font-size: 3rem;
-  }
-  @media (max-width: 1300px) {
-    font-size: 4rem;
-  }
-  @media (max-width: 1500px) {
-    padding: 2rem;
-    font-size: 1rem;
+
+  padding: 2rem 2rem;
+  @media (min-width: 1300px) {
+    padding: 2.5rem 5.5rem;
   }
 `;
 const Title = styled.div`
@@ -77,6 +93,9 @@ const Title = styled.div`
   color: black;
   @media (max-width: 1500px) {
     margin-top: 5rem;
+  }
+  @media (max-width: 960px) {
+    margin-top: 1rem;
   }
 `;
 const Hide = styled.div`
@@ -94,6 +113,16 @@ const Social = styled(motion.div)`
   h2 {
     margin: 2rem;
     font-size: 4em;
+  }
+  a {
+    text-decoration: none;
+    font-size: unset;
+    color: unset;
+  }
+  @media (max-width: 960px) {
+    h2 {
+      font-size: 2em;
+    }
   }
 `;
 

@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 import testLogo from "../img/Corbel.png";
 
 const Nav = () => {
-  console.log(testLogo);
   const { pathname } = useLocation();
   return (
     <StyledNav>
@@ -35,7 +34,12 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+            animate={{
+              width:
+                pathname === "/contact" || pathname === "/contact/message"
+                  ? "50%"
+                  : "0%",
+            }}
           />
         </li>
       </ul>
@@ -76,9 +80,12 @@ const StyledNav = styled.nav`
     padding-left: 10rem;
     position: relative;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 960px) {
+    #logo {
+      display: none;
+    }
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 0rem 0rem;
     #logo {
       /* display: inline-block; */
       /* margin: 1rem; */
@@ -100,8 +107,8 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 0%;
-  @media (min-width: 1300px) {
+  left: 20%;
+  @media (min-width: 960px) {
     left: 60%;
   }
 `;
