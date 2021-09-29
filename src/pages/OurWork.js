@@ -39,7 +39,7 @@ const OurWork = () => {
       <Movie>
         <motion.h2 variants={fade}>Apollo Immo Rent Online</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="capture/work/apollo-immo">
+        <Link to="/work/apollo-immo">
           <Hide>
             <motion.img variants={photoAnim} src={apollo} alt="apollo" />
           </Hide>
@@ -53,7 +53,7 @@ const OurWork = () => {
       >
         <h2>Rawg.io Api</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="capture/work/ignite">
+        <Link to="test/work/ignite">
           <img
             src="https://images.unsplash.com/photo-1627856013091-fed6e4e30025?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
             alt="raw"
@@ -63,7 +63,7 @@ const OurWork = () => {
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <h2>Inframe</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="capture/work/inframe">
+        <Link to="/work/inframe">
           <img src={inframe2} alt="inframe" />
         </Link>
       </Movie>
