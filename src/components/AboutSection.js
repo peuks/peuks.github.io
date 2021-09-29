@@ -1,6 +1,6 @@
 import React from "react";
 // import home1 from "../img/david.jpg";
-import { About, Description, Image, Hide } from "../styles";
+import { About, Description, Image as ImageToStyle, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
@@ -9,8 +9,8 @@ import Button from "./ui/Button";
 import { Link } from "react-router-dom";
 import david from "../img/david1.jpg";
 import Github from "./ui/icons/Github";
-import CheckLink from "./ui/icons/CheckLink";
 import styled from "styled-components";
+import Linkedin from "./ui/icons/Linkedin";
 
 const AboutSection = () => {
   return (
@@ -33,7 +33,7 @@ const AboutSection = () => {
             <Github />
           </a>
           <a href="https://www.linkedin.com/in/davidvanmak/">
-            <CheckLink />
+            <Linkedin />
           </a>
         </Follow>
         <Link to="/work">
@@ -68,4 +68,9 @@ const Follow = styled(motion.div)`
   }
 `;
 
+const Image = styled(ImageToStyle)`
+  img {
+    object-position: right top;
+  }
+`;
 export default AboutSection;

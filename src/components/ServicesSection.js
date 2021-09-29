@@ -32,7 +32,7 @@ const ServicesSection = () => {
             <p>
               Pair Programming
               <br /> Consulting Expertise
-              <br /> Colaboration
+              <br /> Collboration
             </p>
           </Card>
           <Card>
@@ -42,7 +42,7 @@ const ServicesSection = () => {
             </div>
             <p>
               Clean Code
-              <br /> Quality Control Proces
+              <br /> Quality Control Process
               <br /> Quality Report
             </p>
           </Card>
@@ -55,7 +55,7 @@ const ServicesSection = () => {
             <p>
               Versability
               <br /> Lengthy Experience
-              <br /> Scallability
+              <br /> Scalability
             </p>
           </Card>
         </Cards>

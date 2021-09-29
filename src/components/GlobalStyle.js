@@ -7,7 +7,16 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box
 }
 html{
-    
+        &::-webkit-scrollbar{
+            width: 0.5rem;
+            
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: darkgrey;
+        }
+        &::-webkit-scrollbar-track {
+            background: white;
+        }
     @media (max-width: 1700px){
         font-size: 75%;
     }

@@ -10,6 +10,7 @@ const Button = ({ label }) => {
 
 const ButtonStyle = styled(motion.button)`
   &.button {
+    border-radius: 5px;
     font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: 2.28px;

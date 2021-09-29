@@ -48,7 +48,7 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  height: 8vh;
+  height: max(8vh, 6rem);
   display: flex;
   margin: auto;
   justify-content: space-between;
