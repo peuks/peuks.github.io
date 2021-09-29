@@ -35,6 +35,7 @@ const MovieDetail = () => {
               <h2>{movie.title}</h2>
               <div classname="movie__links">
                 {movie.links.map((link) => {
+                  console.log(link.type);
                   return link.type === "sourceCode" ? (
                     <a href={link.link}>
                       <Github />

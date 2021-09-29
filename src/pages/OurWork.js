@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 //Images
 import apollo from "../img/apollo.jpg";
-import ignite from "../img/ignite.svg";
 
 import inframe2 from "../img/inframe.webp";
 //Animations
