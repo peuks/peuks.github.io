@@ -66,12 +66,7 @@ const ContactForm = () => {
           required
         />
 
-        <ButtonStyle
-          type="submit"
-          value="Submit"
-          label="Submit"
-          onClick={handleSubmit}
-        />
+        <ButtonStyle type="submit" value="Submit" label="Submit" />
       </form>
     </FormStyle>
   );
