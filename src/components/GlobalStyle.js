@@ -12,10 +12,13 @@ html{
             
         }
         &::-webkit-scrollbar-thumb{
-            background-color: darkgrey;
+            background: ${(props) =>
+              props.theme.lightTheme.clr__primary__secondary};
         }
         &::-webkit-scrollbar-track {
-            background: white;
+              background-color: ${(props) =>
+                props.theme.lightTheme.clr__primary};
+;
         }
     @media (max-width: 1700px){
         font-size: 75%;
@@ -59,6 +62,10 @@ body{
         color: #ccc;
         font-size: 1.4rem;
         line-height: 150%;
+    }
+    .shadow{
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
     }
 `;
 

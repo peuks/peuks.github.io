@@ -5,12 +5,14 @@ import styled from "styled-components";
 const Button = ({ label }) => {
   // Prevent error if props are not provided
   label = label ?? "N/A";
-  return <ButtonStyle className="button">{label}</ButtonStyle>;
+  return <ButtonStyle className="button shadow">{label}</ButtonStyle>;
 };
 
 const ButtonStyle = styled(motion.button)`
   &.button {
     border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
     font-weight: bold;
     font-size: 1.1rem;
     letter-spacing: 2.28px;
