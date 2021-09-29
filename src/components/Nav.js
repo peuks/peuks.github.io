@@ -48,7 +48,7 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-height: 8vh;
+  height: 8vh;
   display: flex;
   margin: auto;
   justify-content: space-between;

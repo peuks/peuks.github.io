@@ -7,6 +7,7 @@ import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
 import Button from "./ui/Button";
 import { Link } from "react-router-dom";
+import david from "../img/david1.jpg";
 
 const AboutSection = () => {
   return (
@@ -30,11 +31,7 @@ const AboutSection = () => {
       </Description>
       <Image>
         {/* <motion.img variants={photoAnim} src={home1} alt="guy with a camera" /> */}
-        <motion.img
-          variants={photoAnim}
-          src="https://dummyimage.com/840x840.png"
-          alt="guy with a camera"
-        />
+        <motion.img variants={photoAnim} src={david} alt="guy with a camera" />
       </Image>
       <Wave />
     </About>

@@ -46,7 +46,7 @@ export const MovieState = () => {
         {
           title: "This project was made with... 💻",
           description:
-            "Symfony - ApiPlatform - React - Cloudinary - SignaturIt - AllYouCanPost",
+            "Symfony - ApiPlatform - React - Material-Ui - Axios -  Yup - Cloudinary - SignaturIt - AllYouCanPost",
         },
       ],
       images: [
