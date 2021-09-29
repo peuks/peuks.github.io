@@ -1,10 +1,4 @@
-//Import Images
-// import athlete from "./img/athlete-small.png";
-// import goodtimes from "./img/goodtimes-small.png";
-// import LouezsurApollo from "./img/Louez sur Apollo.png";
-import theracer from "./img/theracer-small.png";
 import athlete2 from "./img/athlete2.png";
-import goodtimes2 from "./img/good-times2.jpg";
 import theracer2 from "./img/the-racer2.jpg";
 import apolloImmo from "./img/apolloImmo.png";
 import apollo1 from "./img/apollo1.png";
@@ -32,14 +26,20 @@ export const MovieState = () => {
       mainImg: apollo5,
       secondaryImg: athlete2,
       url: "/work/apollo-immo",
+      links: [
+        {
+          type: "sourceCode",
+          link: "https://apollo-immo.fr/",
+        },
+      ],
       awards: [
         {
-          title: "Apollo Immo - Rental management platform",
+          title: "Rental management platform",
           description:
             "You are an owner and you have an apartment to rent ? Or are you a tenant looking for a new home? Are the steps complicated? Let us help you! ",
         },
         {
-          title: "Renting online has never been so fast and simple ❤️",
+          title: "Renting has never been so fast ❤️",
           description:
             "Multi-platform diffusion of ads, verification of files, virtual visits, creation of contracts, dematerialized inventory of fixtures, electronic signature and much more. No agency fees, simple and secure!",
         },
@@ -58,9 +58,54 @@ export const MovieState = () => {
       ],
     },
     {
+      title: "Inframe",
+      mainImg: inframe2,
+      url: "/work/inframe",
+      links: [
+        {
+          type: "prod",
+          link: "https://inframe.blog/",
+        },
+      ],
+      secondaryImg: theracer2,
+      awards: [
+        {
+          title: "IN FRAME Truly A masterpiece",
+          description:
+            "IN FRAME collects stories about ordinary people with extraordinary hearts. Inspired by the places Vassy ( the author ) has visited and the people she has met there",
+        },
+        {
+          title: "Silent heroes are everywhere! 📕",
+          description:
+            "A candid collection of stories about ordinary people with extraordinary hearts. Wrapped in words, their stories are direct and honest, without a filter. Every second person is a good one, they say. If you don’t see one- be one.",
+        },
+        {
+          title: "This project was made with... 💻",
+          description:
+            "Wordpress , Elementor, Figma, Canva, Font Awesome, Grid",
+        },
+      ],
+      images: [
+        { url: inframe3, label: "" },
+        { url: inframe4, label: "" },
+        { url: inframe5, label: "" },
+        { url: inframe6, label: "" },
+      ],
+    },
+    {
       title: "Ignite",
       mainImg: rawg2,
       url: "/work/ignite",
+      links: [
+        {
+          type: "sourceCode",
+          link: "https://github.com/peuks/ignite",
+        },
+        {
+          type: "prod",
+          link: "https://apollo-immo.fr/",
+        },
+      ],
       secondaryImg: ignite,
       awards: [
         {
@@ -86,35 +131,6 @@ export const MovieState = () => {
         { url: ignite2, label: "" },
         { url: ignite3, label: "" },
         { url: ignite4, label: "" },
-      ],
-    },
-    {
-      title: "Inframe",
-      mainImg: inframe2,
-      url: "/work/inframe",
-      secondaryImg: theracer2,
-      awards: [
-        {
-          title: "IN FRAME Truly A masterpiece",
-          description:
-            "IN FRAME collects stories about ordinary people with extraordinary hearts. Inspired by the places Vassy ( the author ) has visited and the people she has met there",
-        },
-        {
-          title: "Silent heroes are everywhere! 📕",
-          description:
-            "A candid collection of stories about ordinary people with extraordinary hearts. Wrapped in words, their stories are direct and honest, without a filter. Every second person is a good one, they say. If you don’t see one- be one.",
-        },
-        {
-          title: "This project was made with... 💻",
-          description:
-            "Wordpress , Elementor, Figma, Canva, Font Awesome, Grid",
-        },
-      ],
-      images: [
-        { url: inframe3, label: "" },
-        { url: inframe4, label: "" },
-        { url: inframe5, label: "" },
-        { url: inframe6, label: "" },
       ],
     },
   ];

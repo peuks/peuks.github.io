@@ -41,19 +41,10 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/apollo-immo">
           <Hide>
-            <motion.img variants={photoAnim} src={apollo} alt="athlete" />
+            <motion.img variants={photoAnim} src={apollo} alt="apollo" />
           </Hide>
         </Link>
       </Movie>
-
-      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
-        <h2>Inframe</h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/inframe">
-          <img src={inframe2} alt="inframe" />
-        </Link>
-      </Movie>
-
       <Movie
         ref={element2}
         variants={fade}
@@ -69,6 +60,14 @@ const OurWork = () => {
           />
         </Link>
       </Movie>
+      <Movie ref={element} variants={fade} animate={controls} initial="hidden">
+        <h2>Inframe</h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <Link to="/work/inframe">
+          <img src={inframe2} alt="inframe" />
+        </Link>
+      </Movie>
+
       <ScrollTop />
     </Work>
   );

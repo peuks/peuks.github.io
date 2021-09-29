@@ -6,11 +6,13 @@ import { MovieState } from "../movieState";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import Gallery from "../components/Gallery";
+import Github from "../components/ui/icons/Github";
+import CheckLink from "../components/ui/icons/CheckLink";
 
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
+  const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
   //UseEffect
@@ -29,7 +31,22 @@ const MovieDetail = () => {
           animate="show"
         >
           <HeadLine>
-            <h2>{movie.title}</h2>
+            <div className="movie__header">
+              <h2>{movie.title}</h2>
+              <div classname="movie__links">
+                {movie.links.map((link) => {
+                  return link.type === "sourceCode" ? (
+                    <a href={link.link}>
+                      <Github />
+                    </a>
+                  ) : (
+                    <a href={link.link}>
+                      <CheckLink />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
             <img className="headLine__img" src={movie.mainImg} alt="movie" />
             <Test className="test">
               <Gallery images={movie.images} />
@@ -61,8 +78,17 @@ const HeadLine = styled.div`
   min-height: 90vh;
   padding-top: 5vh;
   position: relative;
-  h2 {
+  .movie__header {
+    display: flex;
+    justify-content: space-between;
     padding: 0 2rem 2rem 2rem;
+
+    a {
+      text-decoration: none;
+      font-size: 2.8rem;
+      color: ${(props) => props.theme.lightTheme.clr__secondary};
+      padding-left: 0.5em;
+    }
   }
   .test,
   img {
