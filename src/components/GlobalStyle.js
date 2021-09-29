@@ -14,6 +14,7 @@ html{
         &::-webkit-scrollbar-thumb{
             background: ${(props) =>
               props.theme.lightTheme.clr__primary__secondary};
+              border-radius: 50px;
         }
         &::-webkit-scrollbar-track {
               background-color: ${(props) =>
