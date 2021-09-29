@@ -32,7 +32,7 @@ const ServicesSection = () => {
             <p>
               Pair Programming
               <br /> Consulting Expertise
-              <br /> Collboration
+              <br /> Collaboration
             </p>
           </Card>
           <Card>

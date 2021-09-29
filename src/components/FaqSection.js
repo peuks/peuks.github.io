@@ -24,7 +24,7 @@ const FaqSection = () => {
         <Toggle faqline="true" title="Who Am I ?">
           <div className="answer">
             <p>
-              Fulls Stack React / Php developer living in Strasbourg. I have an
+              Full Stack React / Php developer living in Strasbourg. I have an
               appetite for optimized and well-structured code.
             </p>
             <p>

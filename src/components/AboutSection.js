@@ -19,14 +19,14 @@ const AboutSection = () => {
         <motion.div>
           <Hide>
             <motion.h1 variants={titleAnim}>
-              Developpeur <span>FullStack</span> & Mentor
+              Developer <span>FullStack</span> & Mentor
             </motion.h1>
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Php & React dev who loves design, build and sometimes rescue
-          applications. Have a project, idea or problem you would need to
-          discuss ?
+          Php and React developer who loves to design, build and sometimes come
+          to the rescue for your application. Have an idea or an idea you would
+          need to discuss about ?
         </motion.p>
         <Follow classname="about__links">
           <a href="https://github.com/peuks">

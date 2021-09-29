@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 
 export const About = styled(motion.div)`
   min-height: 45vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2.5rem 5.5rem;
+  padding: 2rem 2rem;
+  text-align: center;
   color: white;
-  @media (max-width: 1300px) {
+  @media (min-width: 1300px) {
     display: block;
-    padding: 2rem 2rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 5.5rem;
   }
 `;
 export const Description = styled.div`
