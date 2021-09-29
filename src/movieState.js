@@ -28,7 +28,7 @@ export const MovieState = () => {
       url: "/work/apollo-immo",
       links: [
         {
-          type: "sourceCode",
+          type: "prod",
           link: "https://apollo-immo.fr/",
         },
       ],
