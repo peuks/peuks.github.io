@@ -19,6 +19,8 @@ const ContactUs = () => {
       animate="show"
       style={{ background: "#fff" }}
     >
+      <Wave />
+
       <div className="wrapper">
         <Title>
           <Hide>
@@ -36,7 +38,6 @@ const ContactUs = () => {
               </Link>
             </Social>
           </Hide>
-          <Wave />
 
           <Hide>
             <Social variants={titleAnim}>
@@ -76,6 +77,9 @@ const ContactUs = () => {
 };
 
 const ContactStyle = styled(motion.div)`
+  .wrapper {
+    z-index: 2;
+  }
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
