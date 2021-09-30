@@ -22,13 +22,7 @@ const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
   return (
-    <Work
-      style={{ background: "#EEEEEE" }}
-      exit="exit"
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-    >
+    <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -73,6 +67,8 @@ const OurWork = () => {
 };
 
 const Work = styled(motion.div)`
+  background-color: ${(props) => props.theme.lightTheme.clr__secondary};
+
   min-height: 100vh;
   overflow: hidden;
   padding: 1rem 5rem;

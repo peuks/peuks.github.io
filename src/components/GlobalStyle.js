@@ -64,6 +64,11 @@ body{
         font-size: 1.4rem;
         line-height: 150%;
     }
+    a{
+        text-decoration: none;
+        color:inherit;
+        font-size: inherit;
+    }
     .shadow{
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
