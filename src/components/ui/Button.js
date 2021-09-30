@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ label }) => {
+const Button = ({ label, variants }) => {
   // Prevent error if props are not provided
   label = label ?? "N/A";
-  return <ButtonStyle className="button shadow">{label}</ButtonStyle>;
+  return <ButtonStyle className="button shadow" variants={variants} >{label}</ButtonStyle>;
 };
 
 const ButtonStyle = styled(motion.button)`
@@ -26,7 +26,7 @@ const ButtonStyle = styled(motion.button)`
     transition: all 0.5s ease;
     &:hover {
       background-color: ${(props) =>
-        props.theme.lightTheme.clr__primary__secondary};
+    props.theme.lightTheme.clr__primary__secondary};
       color: ${(props) => props.theme.lightTheme.clr__secondary};
     }
   }

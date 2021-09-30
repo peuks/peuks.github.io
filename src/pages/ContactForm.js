@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { pageAnimation, titleAnim } from "../animation";
-import ButtonStyle from "../components/ui/Button";
+import { pageAnimation, titleAnim, formAnim } from "../animation";
+import Button from "../components/ui/Button";
 import TextField from "../components/ui/form/TextField";
 
 const ContactForm = () => {
@@ -33,40 +33,54 @@ const ContactForm = () => {
         action="https://formsubmit.co/vanmakdavid.lwg@gmail.com"
         method="POST"
       >
-        <TextField
-          type="hidden"
-          name="_next"
-          value="https://peuks.github.io/"
-        />
-        <TextField
-          type="text"
-          id="fname"
-          name="name"
-          placeholder="Indiana Jones"
-          label="Name"
-          required
-        />
+        <Hide>
+          <TextField
+            type="hidden"
+            name="_next"
+            value="https://peuks.github.io/"
+            variants={formAnim}
+          />
+        </Hide>
+        <Hide>
+          <TextField
+            type="text"
+            id="fname"
+            name="name"
+            placeholder="Indiana Jones"
+            label="Name"
+            variants={formAnim}
+            required
+          />
+        </Hide>
 
-        <TextField
-          type="email"
-          id="email"
-          name="email"
-          placeholder="recrute@me"
-          label="Email"
-          required
-        />
-        <TextField
-          type="textarea"
-          id="subject"
-          name="message"
-          placeholder="Write something.."
-          label="What is it about ?"
-          rows="5"
-          cols="33"
-          required
-        />
+        <Hide>
+          <TextField
+            type="email"
+            id="email"
+            name="email"
+            placeholder="recrute@me"
+            label="Email"
+            required
+            variants={formAnim}
+          />
+        </Hide>
+        <Hide>
+          <TextField
+            type="textarea"
+            id="subject"
+            name="message"
+            placeholder="Write something.."
+            label="What is it about ?"
+            rows="5"
+            cols="33"
+            required
+            variants={formAnim}
+          />
+        </Hide>
 
-        <ButtonStyle type="submit" value="Submit" label="Submit" />
+        <Hide>
+          <Button type="submit" value="Submit" label="Submit" variants={formAnim} />
+        </Hide>
       </form>
     </FormStyle>
   );

@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
 import styled from "styled-components";
+import { Hide } from "../styles";
 
 const AboutUs = () => {
   return (
@@ -18,8 +19,12 @@ const AboutUs = () => {
       animate="show"
     >
       <AboutSection />
-      <ServicesSection />
-      <FaqSection />
+      <Hide>
+        <ServicesSection />
+      </Hide>
+      <Hide>
+        <FaqSection />
+      </Hide>
       <ScrollTop />
     </AboutUsStyle>
   );

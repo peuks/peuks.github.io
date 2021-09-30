@@ -10,10 +10,18 @@ import styled from "styled-components";
  * @param {*} placeholder
  * @returns
  */
-const TextField = ({ type, id, name, placeholder, label, ...props }) => {
+const TextField = ({ type, id, name, placeholder, label, variants, ...props }) => {
   return !(type === "textarea") ? (
-    <TextFieldStyle className="text-field">
-      <label for={id}>{label}</label>
+    <TextFieldStyle
+      className="text-field"
+      variants={variants}
+    >
+      <label
+        for={id}
+        variants={variants}
+      >
+        {label}
+      </label>
       <input
         type={type}
         id={id}
@@ -23,9 +31,17 @@ const TextField = ({ type, id, name, placeholder, label, ...props }) => {
       />
     </TextFieldStyle>
   ) : (
-    <TextFieldStyle className="text-field">
-      <label for={id}>{label}</label>
-      <textarea id={id} name={name} placeholder={placeholder} {...props} />
+    <TextFieldStyle
+      className="text-field"
+      variants={variants}
+    >
+      <label
+        for={id}
+        variants={variants}
+      >
+        {label}
+      </label>
+      <textarea id={id} name={name} placeholder={placeholder} variants={variants} {...props} />
     </TextFieldStyle>
   );
 };

@@ -28,6 +28,15 @@ export const titleAnim = {
   },
 };
 
+export const formAnim = {
+  hidden: { y: 200 },
+  show: {
+    y: 0,
+    transition: { duration: 0.75, ease: "easeOut", staggerChildren: 0.25, when: "beforeChildren" },
+  },
+};
+
+
 export const fade = {
   hidden: { opacity: 0 },
   show: {
@@ -69,7 +78,7 @@ export const sliderContainer = {
 };
 
 export const scrollReveal = {
-  hidden: { opacity: 0, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 1.8, transition: { duration: 0.5 } },
   show: {
     opacity: 1,
     scale: 1,
